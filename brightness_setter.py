@@ -129,9 +129,10 @@ def main():
     if arg.startswith('+') or arg.startswith('-'):
         try:
             delta = int(arg[1:])
+            sign = 1 if arg.startswith('+') else -1
             if current and max_brightness:
                 current_percentage = round((current / max_brightness) * 100)
-                new_percentage = max(0, min(100, current_percentage + delta))
+                new_percentage = max(0, min(100, current_percentage + (sign * delta)))
                 set_brightness(new_percentage)
             return
         except ValueError:
