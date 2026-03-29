@@ -1,0 +1,6 @@
+[submodule "lenovo-legion-scripts"]
+	path = lenovo-legion-scripts
+	url = git@github.com:antony-jr/lenovo-legion5-15arh05-scripts.git
+[submodule "lenovo-legion-linux"]
+	path = lenovo-legion-linux
+	url = https://github.com/johnfanv2/LenovoLegionLinux.git

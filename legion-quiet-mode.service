@@ -1,0 +1,13 @@
+[Unit]
+Description=Lenovo Legion 5 Quiet Mode Fan Curve
+After=multi-user.target
+Documentation=https://github.com/johnfanv2/LenovoLegionLinux
+
+[Service]
+Type=oneshot
+ExecStartPre=/sbin/modprobe legion_laptop
+ExecStart=/home/yunus/repos/LenovoLegionLinux/quiet_mode_setup.sh --no-prompt
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
